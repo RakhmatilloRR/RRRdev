@@ -1,0 +1,138 @@
+.contact{
+    background: url("/images/map-uz.png") center no-repeat;
+    background-size: cover;
+    .content{
+        @extend .jc-center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 20px;
+
+        .row{
+            @extend .jc-center;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .card{
+                background: rgba(255, 255, 255, 0.5);
+                width: 280px;
+                margin:20px;
+                padding: 50px 25px;
+                @extend .b-radius-10;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0 5px 25px rgba(1,1,1, .25);
+                &:hover .contact-icon{
+                    transform: translateY(-10px);
+                }
+
+                .contact-icon{
+                    @extend .c-crimson;
+                    font-size: 60px;
+                    @extend .ta-center;
+                    transition: .5s ease;
+                    
+                }
+                .info{
+                    @include flexBox(column, center, center);
+                    h3{
+                        color: #111;
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin: 10px;
+                    }
+                    span{
+                        color: #222;
+                        font-weight: 500; 
+                    }
+                }
+            }
+            .contact-form{
+                background: rgba(255, 255, 255, 0.705);
+                max-width: 100%;
+                margin-top: 40px;
+                padding: 50px;
+                @extend .b-radius-10;
+                box-shadow: 0 5px 25px rgba(1,1,1, .25);
+                .col-row{
+                    display: flex;
+                    .column{
+                        width:50%;
+                        margin: 10px;
+
+                    }
+                }
+
+                h3{
+                    @extend .c-crimson;
+                    font-size: 25px;
+                    font-weight: 600;
+                    @extend .ta-center;
+                    margin-bottom: 40px;
+                }
+                .input-box{
+                    @extend .ta-center;
+                    @extend .p-relative;
+                    width: 100%;
+                    margin-bottom: 27px;
+
+                    input, textarea {
+                        color:#111;
+                        width: 100%;
+                        padding: 10px;
+                        font-size: 17px;
+                        font-weight: 400;
+                        outline: none;
+                        border: 1px solid #111;
+                        @extend .b-radius-5;
+                        resize: none;
+                    }
+                   
+                    .send-btn{
+                        @extend .c-white;
+                        background: crimson;
+                        display: inline-block;
+                        font-size: 19px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        width: 50%;
+                        border: 1px solid #fff;
+                        cursor: pointer;
+                        transition: .5s ease;
+                        &:hover{
+                            background: #fff;
+                            @extend .c-crimson;
+                            border: 1px solid #111;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px){
+    .contact{
+        .content{
+            .row{
+                .contact-form{
+                    padding: 35px 40px;
+                    .col-row{
+                        display: block;
+                        .column {
+                            width: 100%;
+                            margin: 0;
+                        }
+                    }
+                    .input-box{
+                        .send-btn{
+                            width: 100%;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

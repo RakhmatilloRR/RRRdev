@@ -1,0 +1,41 @@
+.work{
+    background: #000016;
+    .content{
+        @extend .jc-center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 20px;
+
+        .card{
+            width:340px;
+            margin: 15px;
+
+            .card-img{
+                @extend .p-relative;
+                width: 100%;
+                height: 260px;
+                @extend .b-radius-10;
+                overflow: hidden;
+                img {
+                    @extend .p-absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    @extend .b-radius-10;
+                    transition: .5s ease;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            h3 {
+                @include flexBox(row, center, center);
+                a:hover{
+                    @extend .c-crimson;
+                }
+            }
+        }
+    }
+}

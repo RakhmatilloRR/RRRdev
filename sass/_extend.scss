@@ -1,0 +1,38 @@
+.p-relative{
+    position: relative;
+}
+
+.p-absolute{
+    position: absolute;
+}
+
+.c-white{
+    color: #fff;
+}
+.c-crimson{
+    color: crimson;
+}
+
+.jc-center{
+    display: flex;
+    justify-content: center;
+}
+
+.ta-center{
+    text-align: center;
+}
+
+
+.b-radius-10{
+    border-radius: 10px;
+}
+.b-radius-5{
+    border-radius: 5px;
+}
+
+@mixin flexBox($fd, $jc, $ai){
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}

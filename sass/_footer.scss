@@ -1,0 +1,24 @@
+footer{
+    .media-icons{
+        @extend .ta-center;
+        a{
+            @extend .c-white;
+            font-size: 25px;
+            margin:0 15px;
+            text-shadow: 0 5px 15px rgba(1,1,1, .9);
+        }
+    }
+    margin-top: -25px;
+    background: #000016;
+    @extend .c-white;
+    @extend .ta-center;
+    padding: 34px;
+
+    .footer-title{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    p{
+        margin-top: 10px;
+    }
+}

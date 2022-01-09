@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #edf7f9;
+}
+
+.btn{
+    @extend .c-white;
+    width: fit-content;
+    background-color: crimson;
+    font-size: 17px;
+    font-weight: 600;
+    display: inline-block;
+    @extend .ta-center;
+    padding: 10px 20px 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    margin: 30px 0;
+    transition: .5s ease;
+  }
+  .btn:hover{
+      @extend .c-crimson;
+      background: #fff;
+  }
+.scrollToTop-btn{
+    z-index: 1024;
+    position: fixed;
+    background: crimson;
+    @extend .c-white;
+    width: 45px;
+    height: 45px;
+    right: 10px;
+    bottom: 10px;
+    font-size: 22px;
+    @extend .ta-center;
+    line-height: 45px;
+    border-radius: 50% 50% 0 0;
+    cursor: pointer;
+    display: none;
+} 
+
+.reveal{
+    @extend .p-relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1; 
+}
+
+@import "_header.scss";
+
+section{
+    padding: 100px;
+    height: fit-content;
+}
+
+@media(max-width: 1024px){
+    section{
+        padding: 80px 20px;
+    }
+}
+
+@import "_extend.scss";
+@import "_main.scss";
+@import "_about.scss";
+@import "_skills.scss";
+@import "_work.scss";
+@import "_contact.scss";
+@import "_footer.scss";

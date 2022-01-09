@@ -1,0 +1,95 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1024;
+    transition: .5s ease;
+    overflow: hidden;
+
+    .brand {
+        @extend .c-white;
+        font-size: 32px;
+        font-weight: 700px;
+        text-decoration: none;
+        font-family: cursive;
+        font-style: italic;
+    }
+    .navigation{
+        @extend .p-relative;
+        
+        a{
+            @extend .c-white;
+            font-size: 17px;
+            font-weight: 500px;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: .5s ease;
+            
+            &:hover{
+                @extend .c-crimson;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px){
+    header{
+        padding: 12px 20px;
+        
+        .navigation{
+            display: none;
+        }
+        .navigation.active{
+            z-index: 1024;
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 380px;
+            height: 100vh;
+            background: #fff;
+            box-shadow: 0 5px 25px rgba(1,1,1, .25);
+            a{
+                color: black;
+                font-size: 22px;
+                margin: 10px;
+                padding: 0 30px;
+                border-radius: 20px;
+                text-shadow: 1px 0 white, -1px 0 white, 0 1px white, 0 -1px white;
+
+                &:hover{
+                    background: crimson !important;
+                }
+            }
+        }
+        .menu-btn{
+            position: absolute;
+            background: url("/images/menu.png") no-repeat;
+            background-size: contain;
+            background-position: absolute;
+            color:#fff;
+            width:40px;
+            height: 30px;
+            right:0;
+            margin: 0 20px; 
+            cursor: pointer;
+            transition: .4s ease;
+        }
+        .menu-btn.active{
+            z-index: 1025;
+            background: url("/images/close.png") no-repeat;
+            background-size: contain;
+            filter: invert(1);
+        }
+    }
+}

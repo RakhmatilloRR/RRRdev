@@ -1,0 +1,96 @@
+
+.main{
+    @extend .p-relative;
+    width: 100%;
+    min-height: 100vh;
+    @extend .jc-center;
+    align-items: center;
+    background: url("/images/fisherman.webp") no-repeat center fixed;
+    background-size: cover;
+
+    .content{
+        min-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2{
+            @extend .c-white;
+            font-size: 36px;
+            font-weight: 500;
+            @extend .ta-center;
+
+            span{
+                text-shadow: 0 5px 25px rgba(1,1,1, .9);
+                font-size: 60px;
+                font-weight: 600;
+            }
+        }
+
+        .animated-text{
+            height: 70px;
+            overflow: hidden;
+            @extend .p-relative;
+            @extend .ta-center;
+            h3{
+                @extend .c-crimson;
+                font-size: 50px;
+                font-weight: 700;
+                line-height: 70px;
+                letter-spacing: 1px;
+
+                &:nth-child(1){
+                    animation: text-move 10s infinite;
+                }
+                @keyframes text-move {
+                    0%{
+                        margin-top: 0;
+                    }
+                    25%{
+                        margin-top: -70px;
+                    }
+                    50%{
+                        margin-top: -140px;
+                    }
+                    75%{
+                        margin-top: -70px;
+                    }
+                    100%{
+                        margin-top: 0;
+                    }
+                }
+            }
+            
+            
+
+        }
+        .media-icons{
+            @extend .ta-center;
+            a{
+                @extend .c-white;
+                font-size: 25px;
+                margin:0 15px;
+                text-shadow: 0 5px 15px rgba(1,1,1, .9);
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px){
+    .main{
+        .content{
+            h2{
+                font-size: 25px;
+                span{
+                    font-size: 40px;
+                }
+            }
+            .animated-text{
+                h3{
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+}
+
