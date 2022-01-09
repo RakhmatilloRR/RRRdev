@@ -1,1 +1,1 @@
-# Rakhmatillo Rustamov Rustamov (RRR) O'g'li - Web Developer
+# Rakhmatillo Rustamov Rustam (RRR) O'g'li - Web Developer
