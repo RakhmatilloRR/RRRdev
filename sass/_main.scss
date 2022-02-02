@@ -93,4 +93,43 @@
         }
     }
 }
+@media(max-width: 500px){
+    .main{
+        .content{
+            h2{
+                font-size: 25px;
+                span{
+                    font-size: 40px;
+                }
+            }
+            .animated-text{
+                height: 40px;
+                h3{
+                    font-size: 25px;
+                    line-height: 40px;
+                    @keyframes text-move {
+                        0%{
+                            margin-top: 0;
+                        }
+                        25%{
+                            margin-top: -40px;
+                        }
+                        50%{
+                            margin-top: -80px;
+                        }
+                        75%{
+                            margin-top: -40px;
+                        }
+                        100%{
+                            margin-top: 0;
+                        }
+                    }
+                }
+                
+                
+    
+            }
+        }
+    }
+}
 
