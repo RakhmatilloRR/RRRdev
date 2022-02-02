@@ -12,9 +12,9 @@ body {
 }
 
 a.resume {
-  color: #61dafb !important;
   font-style: italic;
   font-weight: 900;
+  text-decoration: underline !important;
 }
 
 .btn {
