@@ -93,3 +93,9 @@ header{
         }
     }
 }
+
+@media(max-width: 350px){
+    header{
+        padding: 12px 20px;
+    }
+}
